@@ -12,14 +12,14 @@ test:
 
 deploy:
   needs: test # Will only run if the test job succeeds
-  if: github.ref == 'refs/heads/master' # Only run this job if it is on the master branch
+  if: github.ref == 'refs/heads/main' # Only run this job if it is on the main branch
 
   runs-on: ubuntu-latest
 
   steps:
     - uses: actions/checkout@v2
       with:
-        ref: master # Checkout out master instead of the latest commit
+        ref: main # Checkout out main instead of the latest commit
         fetch-depth: 0 # Checkout the whole branch
 
     - uses: mhanberg/gigalixir-action@<current release>
