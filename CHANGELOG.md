@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.4.3
+
+- Fix broken build
+
+## v0.4.2
+
+- De-sudo call to `pip`
+
+## v0.4.1
+
+- Deployment works if the action is making the very first deployment.
+
 ## v0.4.0
 
 - Fixed an issue where the action would get stuck at 'Getting current replicas' for apps requesting more than one replica
